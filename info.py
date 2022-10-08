@@ -1,6 +1,5 @@
 import re
 from os import environ
-from pytgcalls import PyTgCalls
 from pyrogram import Client, filters
 
 id_pattern = re.compile(r'^.\d+$')
@@ -72,7 +71,3 @@ if GROUP_MODE==('True','true'):
     grp = True
 else:
     grp = False
-
-GRPPLAY = grp
-bot = Client(SESSION, API_ID, API_HASH, plugins=dict(root="plugins"))
-call_py = PyTgCalls(bot)
